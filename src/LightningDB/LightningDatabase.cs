@@ -110,7 +110,7 @@ namespace LightningDB
             Environment.Disposing -= Dispose;
             IsOpened = false;
             _pinnedConfig.Dispose();
-            mdb_dbi_close(Environment.Handle(), _handle);
+            // mdb_dbi_close(Environment.Handle(), _handle);
             GC.SuppressFinalize(this);
             _handle = default;
         }
